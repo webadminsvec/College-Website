@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Site</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles for ribbon */
+        .ribbon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 22px;
+            font-weight: 700;
+            background-color: #b1040e;
+            color: #fff;
+            padding: 5px 10px;
+            z-index: 1;
+        }
+
+        .ribbon::before {
+            content: '';
+            position: absolute;
+            top: 68%;
+            left: 0px;
+            border: solid transparent;
+            border-width: 14px;
+            border-top-color: #b1040e;
+            transform: translateX(-50%) rotate(-270deg);
+        }
+
+        .button-color {
+            background-color: #b1040e;
+            color: white;
+        }
+
+        .button-div {
+            text-align: right;
+        }
+
+        .card {
+            border-color: #fff;
+        }
+
+        /* Scrollable News Section */
+        .scrollable-text-container {
+            max-height: 200px; /* Set height to fit content */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scrollable-text {
+            display: flex;
+            flex-direction: column;
+            animation: scroll-up 10s linear infinite;
+            font-size: 0.9375rem;
+        }
+
+        .scrollable-text-container:hover .scrollable-text {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-up {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Card 1 - News Section -->
+        <div class="col-12 col-md-6 position-relative pt-3 shadow">
+            <!-- Ribbon for Card 1 -->
+            <div class="ribbon">News</div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="scrollable-text-container">
+                        <ul class="mt-1">
+                            
+                           <li ><a href="uploads/FDP EEE JNTUK SVEC.pdf" target="_blank" class="text-black"><p align=justify>The Department of Electrical and Electronics Engineering is going to organize a 5-Day Faculty Development Programme (FDP) on “Applications of Artificial Intelligence in Electrical Engineering: An Academic and Research Perspective” from 23rd to 27th June 2025, in association with the Department of EEE, University College of Engineering, JNTUK, Kakinada.</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 - Results Section -->
+        <div class="col-12 col-md-6 position-relative pt-3 shadow">
+            <!-- Ribbon for Card 2 -->
+            <div class="ribbon">Results</div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="scrollable-text-container">
+                        <ul class="scrollable-text">
+                            <li>B.Tech III Semester (V18, V20 & V23) Supplementary Examination Results April 2025
+<li>B.Tech IV Semester (V18, V20 & V23) Regular and Supplementary Examination Results April 2025.</li>
+<li>B.Tech V Semester (V18 & V20) Supplementary Examination Results April 2025.</li>
+<li>B.Tech VI semester (V18 & V20) Regular and Supplementary Examination Results April 2025.</li>
+<li>B.Tech VII Semester ( V18 & V20)  Supplementary Examination Results April 2025</li>
+<li>MBA IV Semester (V21) Regular and Supplementary Results April 2025</li>
+<li>M.Tech III Semester (V21) Supplementary Results May 2025</li>
+<li>M.Tech IV Semester (V21) Regular Examination Results May 2025</li>
+                        </ul>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

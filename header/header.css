@@ -1,0 +1,160 @@
+/* Only import needed fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #b1040e;
+    --white: #ffffff;
+    --black: #000000;
+    --text-dark: #12022f;
+    --transition: transform 0.25s ease-out;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Logo and Navigation */
+.logo-image {
+    height: 40px;
+    width: 200px;
+}
+
+.bg-color {
+    background-color: var(--primary-color);
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item-content {
+    color: var(--black);
+    background-color: var(--white);
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item-content:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+/* Navigation Elements */
+.nav-elements-large {
+    display: none;
+}
+
+.second2-navbar-large {
+    background-color: var(--white);
+    width: 100%;
+}
+
+.second2-navbar-large-contents {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Mobile Navigation */
+.small-navbar {
+    padding: 10px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.small-navbar-nav-button {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 3px;
+    color: rgba(255, 255, 255, 0.6);
+    height: 38px;
+    width: 50px;
+}
+
+/* Animation Classes */
+.hover-underline-animation {
+    position: relative;
+    color: var(--black);
+}
+
+.hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: var(--transition);
+    transform-origin: bottom left;
+}
+.small-navbar-last-div-navbar {
+  background-color: snow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-navbar-items-last-div-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+.small-navbar-items-last-div-anchor {
+  color: #12022f;
+  text-decoration: none !important;
+}
+/* Media Queries */
+@media screen and (max-width: 575px) {
+    .clg-title-navbar {
+        font-size: 12px;
+        color: var(--white);
+    }
+    
+    .menu-item-image {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .menu-item-image {
+        height: 150px;
+        width: 150px;
+    }
+    
+    .fixed-main-image {
+        height: 300px;
+        background-position: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .nav-elements-large {
+        display: block;
+    }
+    
+    .nav-elements-small {
+        display: none;
+    }
+}

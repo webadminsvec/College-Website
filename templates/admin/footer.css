@@ -1,0 +1,114 @@
+/* Only import necessary fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #b1040e;
+    --white: #ffffff;
+    --accent-color: #ff5a2c;
+    --transition: all 0.3s ease;
+}
+
+footer {
+    color: var(--white);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.25rem;
+    padding: 0;
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.social-icons li {
+    height: 20px;
+}
+
+.social-icons a i {
+    transition: var(--transition);
+}
+
+.social-icons a:hover i {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.quicklinks li {
+    margin: 0.5rem 0;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.quicklinks li:hover {
+    opacity: 1;
+    font-weight: 500;
+}
+
+.phone {
+    color: var(--accent-color);
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.address {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    line-height: 1.6;
+}
+
+footer h5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.875rem;
+    z-index: 99;
+    width: 3.75rem;
+    font-size: 1.25rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    padding: 0.9375rem;
+    cursor: pointer;
+    transform: rotate(270deg);
+    transition: var(--transition);
+}
+
+#myBtn:hover {
+    background-color: darken(var(--primary-color), 10%);
+    transform: rotate(270deg) scale(1.1);
+}
+
+.shadowmine {
+    box-shadow: 1px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.purpose-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.625rem;
+    font-weight: 800;
+    margin-bottom: 1.875rem;
+}
+
+@media (max-width: 768px) {
+    .phone-small {
+        font-size: 0.7rem;
+    }
+    
+    .address-small {
+        font-size: 0.875rem;
+    }
+}

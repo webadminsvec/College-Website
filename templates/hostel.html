@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hostel</title>
+    <link rel="icon" href="https://res.cloudinary.com/dqe4ld4cx/image/upload/v1693810335/SVEC_logo_dyjxrl.png" type="image/x-icon">
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <head>
+      <!-- Font Awesome CDN Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="../css/club.css" />
+    
+
+    <!-- Load header and footer using jQuery -->
+    <script>
+      $(function () {
+        $("#header").load("./header.html");
+        $("#footer").load("./footer.html");
+      });
+    </script>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Prevent Ctrl+U
+            if (e.ctrlKey && e.keyCode == 85) {
+                e.preventDefault();
+                return false;
+            }
+            // Prevent Ctrl+S
+            if (e.ctrlKey && e.keyCode == 83) {
+                e.preventDefault();
+                return false;
+            }
+            // Prevent Ctrl+Shift+I
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                e.preventDefault();
+                return false;
+            }
+            // Prevent F12
+            if (e.keyCode == 123) {
+                e.preventDefault();
+                return false;
+            }
+        });
+          // Disable right-click
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    if (
+      (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+      (e.key === 'F12') ||
+      (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I'))
+    ) {
+      e.preventDefault();
+    }
+  });
+
+  // Disable print screen
+  document.addEventListener('keyup', (e) => {
+    if (e.key === 'PrintScreen') {
+      navigator.clipboard.writeText('');
+    }
+  });
+
+  // Clear clipboard on page load
+  window.addEventListener('load', () => {
+    navigator.clipboard.writeText('');
+  });
+    </script>
+
+    <style>
+        /* Prevent text selection */
+      
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+    </style>
+
+    <style>
+      /* style for facilities*/
+      body {
+                font-size: 14px; 
+                color:#850209; 
+            }
+            .list-group-item {
+                font-size: 12px; 
+            }
+            .card-header h1 {
+                font-size: 24px; /
+            }
+            .card-footer p {
+                font-size: 12px; 
+            }
+            /* Feature card default style */
+      .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+        opacity: 1;
+      }
+    
+      /* Hover effect */
+      .feature-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        opacity: 0.9;  
+      }
+      li {
+            font-family: 'Sans-serif'; 
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        h1 {
+            color: #b1040e;
+            text-align: center;
+        }
+        /* Animation for fading in */
+        .fade-in {
+            animation: fadeInAnimation 1.5s ease-in;
+        }
+        @keyframes fadeInAnimation {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        li {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 0.9rem; 
+    color:white; 
+    margin-bottom: 6px; 
+    line-height: 1.5; 
+  }
+    
+      </style>
+      
+  </head>
+  <body>
+    <!-- Header included here -->
+    <div id="header"></div>
+
+    <div class="text-center container Startclub" style="margin-top: 180px">
+      <div class="text-center" style="font-size: 40px; font-weight: bold">
+        Hostel Haven
+      </div>
+      <div style="margin: 30px;" class="cubp">
+        The hostel facilities at Sri Vasavi Engineering College are designed to provide a comfortable and conducive environment for students.The hostel experience is aimed at fostering a sense of community and helping students maintain a balanced lifestyle while pursuing their academic goals.
+      </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+      <center>
+        <img
+          src="../images/campusLife/room.jpg"
+          alt=""
+          width="100%"
+          style="max-width: 80%"
+        />
+      </center>
+    </div>
+
+    <div
+      
+    style="margin-top: 100px;"
+    >
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- Left column with an image -->
+        <div class="col-md-6">
+          <div class="image-container">
+            <img
+              src="../images/campusLife/boyshostel.jpg"
+              alt="Image"
+              class="img-fluid"
+              style="border-radius: 10px"
+            />
+          </div>
+        </div>
+
+        <!-- Right column with content -->
+        <div class="col-md-6">
+          <div
+            class="content-container"
+            style="border-radius: 5px; color: #fff"
+          >
+            <h2>Gents Hostel</h2>
+            <p>The gents hostel in SVEC provides spacious rooms with basic amenities, ensuring a comfortable stay for students. It features 24/7 security, well-maintained common areas, and access to study rooms. The hostel fosters a disciplined yet friendly environment, perfect for academic focus and social interactions.</p>
+            <p>Hostel No.1:</p>
+            <ul>
+              <li>Intake capacity: 250</li>
+              <li>Allocation: Diploma, B.Tech II, III, IV Years</li>
+            </ul>
+            <p>Hostel No.2:</p>
+            <ul>
+              <li>Intake capacity: 250</li>
+              <li>Allocation: B.Tech year, M.tech, MCA, MBA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="container mlsc" style="margin-top: 100px;">
+      <div class="row">
+        <div class="col-md-6">
+          <div
+            class="contents-container"
+            style="border-radius: 5px; color: #fff"
+          >
+            <h2 class="card-title">Ladies Hostel</h2>
+            <p class="card-text">The ladies hostel in SVEC offers a safe and peaceful atmosphere for female students, with well-ventilated rooms and essential facilities. It emphasizes security, with round-the-clock surveillance and a supportive community for all residents. The hostel provides a comfortable space for both study and relaxation.</p>
+            <p>Hostel No.1:</p>
+            <ul>
+              <li>Intake capacity: 250</li>
+              <li>Allocation: Diploma, B.Tech II, III, IV Years</li>
+            </ul>
+            <p>Hostel No.2:</p>
+            <ul>
+              <li>Intake capacity: 250</li>
+              <li>Allocation: B.Tech year, M.tech, MCA, MBA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="images-container">
+            <img
+              src="../images/campusLife/girlshostel.jpg"
+              alt="Image"
+              class="img-fluid fade-in"
+              style="border-radius: 10px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin:60px 0px;font-size: 40px; font-weight: bold;text-align: center;"
+    >
+    <div class="tab-pane" id="tab2">
+      <div class="container mt-4">
+        <h2 class="mt-8" style="margin-bottom: 30px; color: #b1040e; font-family: 'Arial', sans-serif;">
+          Hostel Facilities
+        </h2>
+    
+        
+        <!-- Hostel Features List -->
+<div class="row mt-4 justify-content-center">
+  
+  <!-- Feature 1: Rooms -->
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="feature-card" style="border: 2px solid #b1040e; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <div class="feature-header" style="background-color:#b1040e; padding: 20px; text-align: center; color: white;">
+        <span class="icon" style="font-size: 40px;"><i class="fas fa-bed"></i></span> <!-- Font Awesome Icon -->
+        <h4 style="font-size: 1.25rem;">Spacious Rooms</h4>
+      </div>
+      <div class="feature-body" style="padding: 20px; text-align: center; font-size: 1rem; line-height: 1.5;">
+        <p>Well-ventilated and comfortable rooms with all necessary furnishings. Ideal for studying and relaxing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 2: Mess -->
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="feature-card" style="border: 2px solid #b1040e; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <div class="feature-header" style="background-color:#b1040e; padding: 20px; text-align: center; color: white;">
+        <span class="icon" style="font-size: 40px;"><i class="fas fa-utensils"></i></span> <!-- Font Awesome Icon -->
+        <h4 style="font-size: 1.25rem;">Hygienic Mess</h4>
+      </div>
+      <div class="feature-body" style="padding: 20px; text-align: center; font-size: 1rem; line-height: 1.5;">
+        <p>Healthy and nutritious food with multiple meal options every day. Fresh ingredients for every meal.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 3: Security -->
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="feature-card" style="border: 2px solid #b1040e; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <div class="feature-header" style="background-color: #b1040e; padding: 20px; text-align: center; color: white;">
+        <span class="icon" style="font-size: 40px;"><i class="fas fa-lock"></i></span> <!-- Font Awesome Icon -->
+        <h4 style="font-size: 1.25rem;">24/7 Security</h4>
+      </div>
+      <div class="feature-body" style="padding: 20px; text-align: center; font-size: 1rem; line-height: 1.5;">
+        <p>Round-the-clock security with CCTV surveillance to ensure the safety of all students in hostel premises.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 4: Wi-Fi -->
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="feature-card" style="border: 2px solid #b1040e; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <div class="feature-header" style="background-color: #b1040e; padding: 20px; text-align: center; color: white;">
+        <span class="icon" style="font-size: 40px;"><i class="fas fa-wifi"></i></span> <!-- Font Awesome Icon -->
+        <h4 style="font-size: 1.25rem;">High-Speed Wi-Fi</h4>
+      </div>
+      <div class="feature-body" style="padding: 20px; text-align: center; font-size: 1rem; line-height: 1.5;">
+        <p>High-speed internet connectivity available in all hostel areas. Stay connected anytime!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 5: Recreational Facilities -->
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="feature-card" style="border: 2px solid #b1040e; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <div class="feature-header" style="background-color: #b1040e; padding: 20px; text-align: center; color: white;">
+        <span class="icon" style="font-size: 40px;"><i class="fas fa-gamepad"></i></span> <!-- Font Awesome Icon -->
+        <h4 style="font-size: 1.25rem;">Recreational Facilities</h4>
+      </div>
+      <div class="feature-body" style="padding: 20px; text-align: center; font-size: 1rem; line-height: 1.5;">
+        <p>Indoor games, TV lounges, and outdoor sports to unwind and relax after a busy day.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+        
+      </div>
+    </div>
+    
+    <div class="bg-light py-5">
+      <div class="container fade-in">
+          <div class="card border-0 rounded-lg bg-white">
+              <div class="card-header text-center" style="background-color:#b1040e; color:white;">
+                  <h1 class="mb-0">Hostel Rules & Regulations</h1>
+              </div>
+              <div class="card-body">
+                  <!-- List of rules-->
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><strong>1. Check-In Time:</strong> 2:00 PM onwards.</li>
+                      <li class="list-group-item"><strong>2. Check-Out Time:</strong> 7:30 PM.</li>
+                      <li class="list-group-item"><strong>3. Cleanliness:</strong> Students must keep their area clean and dispose of trash in designated bins.</li>
+                      <li class="list-group-item"><strong>4. Security:</strong> Always lock your door and keep valuables in the provided lockers.</li>
+                      <li class="list-group-item"><strong>5. Noise:</strong> Avoid loud noise or music that can disturb other residents.</li>
+                      <li class="list-group-item"><strong>6. Ragging:</strong> Ragging in any form in the hostel is illegal. Sent to jail range from 6 months to 10 years in jail, with fines up to Rs. 50,000/-.</li>
+                  </ul>
+              </div>
+              <div class="card-footer text-center text-muted">
+                  <p class="mb-0">For any inquiries, please contact Phone: 08818-284355.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    
+  </div>
+  </div>
+
+    <!-- Footer included here -->
+    <div id="footer"></div>
+
+    <!-- <script>
+      // Function to handle the scroll event for left column
+      function handleScroll() {
+        const contentContainer = document.querySelector(".image-container");
+        const contentContainerTop = contentContainer.getBoundingClientRect().top;
+
+        // Define the scroll position where you want the animation to trigger
+        const triggerScrollPosition = window.innerHeight / 2;
+
+        if (contentContainerTop < triggerScrollPosition) {
+          // When you scroll to the desired position, add the animation class
+          contentContainer.classList.add("card-slide-animation");
+        }
+      }
+
+      // Add a scroll event listener to trigger the animation for the left column
+      window.addEventListener("scroll", handleScroll);
+
+      // Function to handle the scroll event for right column
+      function handleScrol() {
+        const contentContainer = document.querySelector(".images-container");
+        const contentContainerTop = contentContainer.getBoundingClientRect().top;
+
+        // Define the scroll position where you want the animation to trigger
+        const triggerScrollPosition = window.innerHeight / 2;
+
+        if (contentContainerTop < triggerScrollPosition) {
+          // When you scroll to the desired position, add the animation class
+          contentContainer.classList.add("card-slide-right-animation");
+        }
+      }
+
+      // Add a scroll event listener to trigger the animation for the right column
+      window.addEventListener("scroll", handleScrol);
+    </script> -->
+    <script>
+      // Function to handle the scroll event for left column
+      function handleScrollLeft() {
+        const contentContainerLeft = document.querySelector(".image-container");
+        const contentContainerTop = contentContainerLeft.getBoundingClientRect().top;
+    
+        // Define the scroll position where you want the animation to trigger
+        const triggerScrollPosition = window.innerHeight / 2;
+    
+        if (contentContainerTop < triggerScrollPosition) {
+          // When you scroll to the desired position, add the animation class
+          contentContainerLeft.classList.add("card-slide-animation");
+        }
+      }
+    
+      // Add a scroll event listener to trigger the animation for the left column
+      window.addEventListener("scroll", handleScrollLeft);
+    
+      // Function to handle the scroll event for right column
+      function handleScrollRight() {
+        const contentContainerRight = document.querySelector(".images-container");
+        const contentContainerTop = contentContainerRight.getBoundingClientRect().top;
+    
+        // Define the scroll position where you want the animation to trigger
+        const triggerScrollPosition = window.innerHeight / 2;
+    
+        if (contentContainerTop < triggerScrollPosition) {
+          // When you scroll to the desired position, add the animation class
+          contentContainerRight.classList.add("card-slide-right-animation");
+        }
+      }
+    
+      // Add a scroll event listener to trigger the animation for the right column
+      window.addEventListener("scroll", handleScrollRight);
+    </script>
+    
+  </body>
+</html>
+
+
+
